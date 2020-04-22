@@ -19,10 +19,12 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.changeFilters = this.changeFilters.bind(this);
+    this.changeOrder = this.changeFilters.bind(this);
     this.state = {
       pageInfo: {},
       apiInfo: [],
-      textFilter: ""
+      textFilter: "",
+      order: "id"
     }
   } 
   componentDidMount() {

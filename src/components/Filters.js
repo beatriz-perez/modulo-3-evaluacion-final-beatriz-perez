@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 // Componentes:
 import TextInput from './FormComponents/TextInput';
+import RadioImput from './FormComponents/RadioInput'
 
 export default class Filters extends Component {
     render() {
 
-        const { info:{ textFilter} , task } = this.props;
+        const { info:{ textFilter, order} , task } = this.props;
 
         return (
             <form>
@@ -18,7 +19,21 @@ export default class Filters extends Component {
                     labelText="filtrar por nombre"
                     sampleText="Rick"
                 />
-            </form>
+
+                <RadioImput name="order" 
+                    value="name"
+                    checkValue={order} 
+                    task={task} 
+                    labelText="ordenar por nombre"
+                />
+                <RadioImput name="order" 
+                    value="id"
+                    checkValue={order} 
+                    task={task} 
+                    labelText="ordenar por id"
+                />
+
+            </form> 
         )
     }
 }

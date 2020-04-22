@@ -11,7 +11,7 @@ export default class Detail extends Component {
         if(!detailInfo) {
             return (
                 <div>
-                    <p>cargando información...</p>
+                    <p>RAYOS! No hay información... parece que el personaje que buscas no existe!</p>
                     <Link to="/">VOLVER</Link>
                 </div>
             )
