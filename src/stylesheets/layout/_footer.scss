@@ -1,0 +1,28 @@
+// ESTILOS DE CONTENEDOR -----------------------------------------
+.container__page--footer{
+    width: 100vw;
+    background-color: $backgroundFooter;
+    border-top: 1px solid $colorTheme4;
+}
+.container__section--footer{
+    width: 100%;
+    height: $footerHeightMobile;
+    min-height: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    @include mediaSize(tablet){
+        height: $footerHeightTablet;
+    }
+    @include mediaSize(desktop){
+        height: $footerHeightDesktop;
+    }
+}
+
+// ESTILOS DE ELEMENTOS -------------------------------------------
+
+.footer__text{
+    white-space: pre;
+}
