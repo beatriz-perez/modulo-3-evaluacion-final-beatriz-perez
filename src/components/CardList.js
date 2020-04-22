@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // Componentes:
 import Card from './Card';
@@ -10,7 +11,9 @@ export default class CardList extends Component {
         const generateJSX = (item, index) => {
             return(
                 <li key={index}>
-                    <Card info={item}/>
+                    <Link to={`/detail/${item.id}`} className="card">
+                        <Card info={item}/>
+                    </Link>
                 </li>
             )
         };

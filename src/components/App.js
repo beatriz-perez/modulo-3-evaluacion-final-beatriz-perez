@@ -13,7 +13,7 @@ import Section from './LayoutComponents/Section';
 import Footer from './LayoutComponents/Footer';
 import Filters from './Filters';
 import CardList from './CardList';
-
+import Detail from './Detail';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -51,12 +51,23 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <Header title="Título de la aplicación" />
-        <Section id="centralSection" title="Sección principal" role="main content">
-          
-          <Filters info={this.state} task={this.changeFilters}/>
-          <CardList info={this.state}/>
 
+        <Section id="centralSection" title="Sección principal" role="main content">
+          <Switch>
+
+            <Route exact path="/">
+              <Filters info={this.state} task={this.changeFilters}/>
+              <CardList info={this.state}/>
+            </Route>
+
+            <Route 
+              path="/detail/:id"
+              render={routerProps => <Detail match={routerProps.match} info={this.state.apiInfo}/>} 
+            />
+
+          </Switch>
         </Section>
+
         <Footer />
       </div>
     );
