@@ -17,18 +17,20 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      pageInfo: {},
       apiInfo: []
     }
   } 
   componentDidMount() {
     const savedState = JSON.parse(localStorage.getItem('localinfo'));
     if(!savedState) {
-      // fetchApiInfo() 
-      // .then(data => {
-      //   this.setState({
-      //     apiInfo: data,
-      //   });
-      // });
+      fetchApiInfo() 
+      .then(data => {
+        this.setState({
+          apiInfo: data.results,
+          pageInfo: data.info
+        });
+      });
     } else {
       this.setState(savedState);
     }
