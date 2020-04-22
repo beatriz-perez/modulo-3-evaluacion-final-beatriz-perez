@@ -6,17 +6,31 @@ export default class Detail extends Component {
     render() {
         const { match:{params:{id}}, info } = this.props;
         let detailInfo = info.length === 0 ? null : info.find(item => item.id.toString() === id);
-        console.log(detailInfo);
+        console.log('detailInfo', detailInfo);
 
-        return (
+        if(!detailInfo) {
+            return (
+                <div>
+                    <p>cargando información...</p>
+                    <Link to="/">VOLVER</Link>
+                </div>
+            )
+        } else {
+            const { image, name, species, gender, origin:{ name:planet }, episode, status } = detailInfo;
+            return (
+                <div>
+                    <img src={image} alt={name}/>
+                    <p>nombre: {name}</p>
+                    <p>especie: {species}</p>
+                    <p>género: {gender}</p>
+                    <p>planeta de origen: {planet}</p>
+                    <p>episodios en los que aparece: {episode.length}</p>
+                    <p>estado: {status}</p>
 
-            
-            <div>
-
-                <Link to="/">VOLVER</Link>
-                
-            </div>
-        )
+                    <Link to="/">VOLVER</Link>
+                </div>
+            )
+        }
     }
 }
 
