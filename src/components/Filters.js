@@ -16,6 +16,7 @@ export default class Filters extends Component {
                     value={textFilter} 
                     task={task} 
                     labelText="filtrar por nombre"
+                    sampleText="Rick"
                 />
             </form>
         )

@@ -12,7 +12,7 @@ export default class TextInput extends Component {
     }
 
     render() {
-        const { name, value, labelText } = this.props;
+        const { name, value, labelText, sampleText } = this.props;
         return (
             <React.Fragment>
                 <label htmlFor={name} className="text__base">{labelText}</label>
@@ -21,6 +21,7 @@ export default class TextInput extends Component {
                     name={name} 
                     type="text" 
                     value={value} 
+                    placeholder={sampleText}
                     onChange={this.handleChange}
                 />  
             </React.Fragment>
@@ -32,5 +33,6 @@ TextInput.propTypes = {
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     task: PropTypes.func.isRequired,
-    labelText: PropTypes.string.isRequired
+    labelText: PropTypes.string.isRequired,
+    sampleText: PropTypes.string
 }
