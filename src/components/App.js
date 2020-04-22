@@ -11,6 +11,7 @@ import { fetchApiInfo } from '../services/APIservice';
 import Header from './LayoutComponents/Header';
 import Section from './LayoutComponents/Section';
 import Footer from './LayoutComponents/Footer';
+import CardList from './CardList';
 
 
 export default class App extends React.Component {
@@ -44,6 +45,9 @@ export default class App extends React.Component {
       <div className="App">
         <Header title="Título de la aplicación" />
         <Section id="centralSection" title="Sección principal" role="main content">
+
+          <CardList info={this.state}/>
+
         </Section>
         <Footer />
       </div>
