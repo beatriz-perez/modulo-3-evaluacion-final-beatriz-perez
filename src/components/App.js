@@ -11,15 +11,18 @@ import { fetchApiInfo } from '../services/APIservice';
 import Header from './LayoutComponents/Header';
 import Section from './LayoutComponents/Section';
 import Footer from './LayoutComponents/Footer';
+import Filters from './Filters';
 import CardList from './CardList';
 
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+    this.changeFilters = this.changeFilters.bind(this);
     this.state = {
       pageInfo: {},
-      apiInfo: []
+      apiInfo: [],
+      textFilter: ""
     }
   } 
   componentDidMount() {
@@ -38,14 +41,19 @@ export default class App extends React.Component {
   }
   componentDidUpdate() {
     localStorage.setItem('localinfo', JSON.stringify(this.state));
-  }
+  };
+
+  changeFilters(name, value) {
+    this.setState({ [name]: value })
+  };
 
   render() {
     return (
       <div className="App">
         <Header title="Título de la aplicación" />
         <Section id="centralSection" title="Sección principal" role="main content">
-
+          
+          <Filters info={this.state} task={this.changeFilters}/>
           <CardList info={this.state}/>
 
         </Section>
