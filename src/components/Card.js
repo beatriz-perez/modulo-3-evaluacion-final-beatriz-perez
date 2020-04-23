@@ -38,17 +38,17 @@ export default class Card extends Component {
                         <p className="card__infobox--id">{id}</p>
                     </div>
                     <div className="card__infobox--info">
-                        <p className="text__card text__card--bold">especie</p>
+                        <p className="text__card text__card--bold">species</p>
                         {speciesIcon}
                         <p className="text__card">{species}</p>
                     </div>
                     <div className="card__infobox--info">
-                        <p className="text__card text__card--bold">género</p>
+                        <p className="text__card text__card--bold">gender</p>
                         {genderIcon}
                         <p className="text__card">{gender}</p>
                     </div>
                     <div className="card__infobox--info">
-                        <p className="text__card text__card--bold">estado</p>
+                        <p className="text__card text__card--bold">status</p>
                         {statusIcon}
                         <p className="text__card">{status}</p>
                     </div>

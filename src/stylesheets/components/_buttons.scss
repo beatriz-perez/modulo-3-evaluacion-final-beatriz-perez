@@ -1,3 +1,16 @@
 // INPUTS
 
 // BUTTONS
+.button__base{
+    display: inline-block;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid $colorTextMiddle;
+    color: $colorTextMiddle;
+    box-shadow: 0 0 3px $colorTextMiddle;
+    &:hover{
+        box-shadow: 0 0 5px $colorTextMiddle inset;
+    }
+}
