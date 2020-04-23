@@ -6,12 +6,20 @@ import TextInput from './FormComponents/TextInput';
 import RadioImput from './FormComponents/RadioInput'
 
 export default class Filters extends Component {
-    render() {
+    constructor(props) {
+        super(props);
+        this.preventSubmit = this.preventSubmit.bind(this);
+    }
 
+    preventSubmit(event) {
+        event.preventDefault();
+    }
+
+    render() {
         const { info:{ textFilter, order} , task } = this.props;
 
         return (
-            <form>
+            <form className="firltersBox" onSubmit={this.preventSubmit}>
                 <TextInput 
                     name="textFilter" 
                     value={textFilter} 
@@ -20,13 +28,15 @@ export default class Filters extends Component {
                     sampleText="Rick"
                 />
 
-                <RadioImput name="order" 
+                <RadioImput 
+                    name="order" 
                     value="name"
                     checkValue={order} 
                     task={task} 
                     labelText="ordenar por nombre"
                 />
-                <RadioImput name="order" 
+                <RadioImput 
+                    name="order" 
                     value="id"
                     checkValue={order} 
                     task={task} 

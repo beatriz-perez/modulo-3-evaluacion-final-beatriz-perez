@@ -52,7 +52,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header title="Título de la aplicación" />
+        <Header title="buscador de personajes" />
 
         <Section id="centralSection" title="Sección principal" role="main content">
           <Switch>

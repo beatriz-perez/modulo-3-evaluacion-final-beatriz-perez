@@ -12,8 +12,8 @@ export default class Header extends React.Component {
                 <div className="container__general">
                     <div className="container__section--header">
 
-                        <img src={Rick_and_Morty_logo} alt="Rick and Morty Logo"/>
-                        <h1 className="text__SITE--title">
+                        <img src={Rick_and_Morty_logo} alt="Rick and Morty Logo" className="header__logo"/>
+                        <h1 className="header__title text__header">
                             {this.props.title}
                         </h1>
 
@@ -27,5 +27,5 @@ Header.defaultProps = {
     title: 'aplicación react'
 }
 Header.propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string
 }

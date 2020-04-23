@@ -2,16 +2,17 @@
 .container__page--header{
     width: 100vw;
     background-color: $backgroundHeader;
-    border-bottom: 1px solid $colorTheme4;
 }
 .container__section--header{
     width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
     height: $headerHeightMobile;
 
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @include mediaSize(tablet){
         height: $headerHeightTablet;
@@ -23,3 +24,23 @@
 
 
 // ESTILOS DE ELEMENTOS -------------------------------------------
+.header__logo{
+    z-index: 0;
+    height: 100px;
+    @include mediaSize(tablet){
+        height: 150px;
+    }
+    @include mediaSize(desktop){
+        height: 202px;
+    }
+}
+.header__title{
+    z-index: 1;
+    margin-top: -13px;
+    @include mediaSize(tablet){
+        margin-top: -16px;
+    }
+    @include mediaSize(desktop){
+        margin-top: -20px;
+    }
+}

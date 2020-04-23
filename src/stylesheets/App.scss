@@ -21,6 +21,9 @@
   }
 }
 .container__general{
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
   @include mediaSize(tablet){

@@ -2,27 +2,129 @@
 .container__page--section{
     width: 100vw;
     background-color: $bacKgroundSection;
-    border-bottom: 1px solid $colorTheme4;
 }
 .container__section--section{
     width: 100%;
     height: $sectionHeightMobile;
+    overflow: scroll;
+
 
     padding-top: 20px;
     padding-bottom: 20px;
 
     @include mediaSize(tablet){
         height: $sectionHeightTablet;
-        overflow: scroll;
     }
     @include mediaSize(desktop){
         height: $sectionHeightDesktop;
-        overflow: scroll;
     }
 }  
 
 // ESTILOS DE ELEMENTOS -------------------------------------------
 
 .section__title{
+    width: 100%;
+    text-align: center;
     padding-bottom: 20px;
+}
+
+.firltersBox{
+    margin: 0 10px;
+    border-radius: 30px;
+    border: 2px solid $colorTheme3;
+    box-shadow: 0 0 15px 5px $colorTheme2;
+    background-color: rgba( 0, 0, 0, 0.6);
+    padding: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+.resultsInfo{
+    color: $colorWhite;
+    text-align: center;
+    margin: 2rem;
+}
+
+.cardList{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px;
+    grid-auto-flow: row;
+    grid-auto-rows: 350px;
+    grid-gap: 1rem 0;
+    @include mediaSize(tablet){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include mediaSize(desktop){
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+
+    .listElement{
+        grid-column: span 1;
+        grid-row: span 1;
+        position: relative;
+
+        .card{
+            @include centerAll();
+            width: 220px;
+            height: 350px;
+            border: 1px solid $colorTheme5;
+            box-shadow: 0 0 7px 4px $colorTheme4;
+            padding: 10px;
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &__image{
+                width: 200px;
+                height: 200px;
+                border-radius: 10px 10px 0 0;
+                border: 2px solid $colorTheme1;
+            }
+            &__text{
+                width: 100%;
+                height: 3em;
+                text-align: center;
+                padding-top: 2px;  
+                text-shadow: $colorBlack 0 -2px 3px;              
+                background: linear-gradient($colorTheme1, $colorBlack);
+            }
+            &__infobox{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                &--id{
+                    margin-top: 7px;
+                    background-color: $colorTheme1;
+                    color: $colorTextDark;
+                    border-radius: 50%;
+                    height: 25px;
+                    width: 25px;
+                    padding: 5px;
+                    font-size: 15px;
+                    text-align: center;
+                    font-family: $fontFamilyBase;
+                    font-weight: $fontExtraBold;
+                }
+                &--icon{
+                    margin-top: 5px;
+                    font-size: 20px;
+                    margin-bottom: 5px;
+                    color: $colorTheme1;
+                }    
+                &--info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+            }
+        }
+    }
 }

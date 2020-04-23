@@ -8,23 +8,24 @@ import Card from './Card';
 export default class CardList extends Component {
     render() {
 
+        console.log(this.props);
         const generateJSX = (item, index) => {
-            return(
-                <li key={index}>
-                    <Link to={`/detail/${item.id}`} className="card">
-                        <Card info={item}/>
+            return (
+                <li key={index} className="listElement">
+                    <Link to={`/detail/${item.id}`}>
+                        <Card info={item} />
                     </Link>
                 </li>
             )
         };
-
+        
         const { apiInfo, textFilter, order } = this.props.info;
         const resultsArray = apiInfo
             .filter(item => textFilter === "" || item.name.toLowerCase().includes(textFilter.toLowerCase()))
             .sort((a, b) => {
-                if (a[order] > b[order]) {return 1;}
-                if (a[order] < b[order]) {return -1;}
-                else {return 0;}
+                if (a[order] > b[order]) { return 1; }
+                if (a[order] < b[order]) { return -1; }
+                else { return 0; }
             })
             .map(generateJSX);
 
@@ -42,8 +43,8 @@ export default class CardList extends Component {
 
         return (
             <React.Fragment>
-                <p className="text__base">{resultInfoText}</p>
-                <ul>
+                <p className="resultsInfo text__base">{resultInfoText}</p>
+                <ul className="cardList">
                     {resultsArray}
                 </ul>
             </React.Fragment>
