@@ -54,7 +54,7 @@ export default class App extends React.Component {
       <div className="App">
         <Header title="buscador de personajes" />
 
-        <Section id="centralSection" title="Sección principal" role="main content">
+        <Section id="centralSection" role="main content">
           <Switch>
 
             <Route exact path="/">

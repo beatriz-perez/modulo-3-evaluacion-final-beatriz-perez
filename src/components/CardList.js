@@ -32,7 +32,8 @@ export default class CardList extends Component {
         let resultInfoText;
         switch (resultsArray.length) {
             case 0:
-                resultInfoText = "RAYOS! Parece que no hay ningún personaje que coincida con tu búsqueda."
+                resultInfoText = 
+                `¡RAYOS! Parece que no hay ningún personaje que coincida con tu búsqueda "${textFilter}".`
                 break;
             case 1:
                 resultInfoText = "Hay un único resultado para tu búsqueda:"

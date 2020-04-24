@@ -18,49 +18,42 @@
     }
 }
 
-
-.text__section--title{
+// GENERAL TEXTS
+.text__title{
     font-family: $fontFamilyBase;
     color: $colorTextBase;
+    font-weight: $fontBold;
     font-size: 14px;
-    line-height: 14px;
-    font-weight: 700;
+    line-height: 18px;
     text-transform: none;
     @include mediaSize(tablet){
         font-size: 16px;
-        line-height: 16px;
+        line-height: 20px;
         }
     @include mediaSize(desktop){
-        font-size: 20px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 22px;
     }
 }
 
-
-// GENERAL TEXTS
 .text__base{
     font-family: $fontFamilyBase;
     color: $colorTextBase;
-    font-size: 12px;
-    line-height: 12px;
     font-weight: $fontRegular;
+    font-size: 12px;
+    line-height: 18px;
     text-transform: none;
-    &--link{
-        font-weight: $fontBold;
-        text-transform: capitalize;
-    }
     @include mediaSize(tablet){
         font-size: 14px;
-        line-height: 14px;
+        line-height: 20px;
     }
     @include mediaSize(desktop){
         font-size: 16px;
-        line-height: 16px;
+        line-height: 22px;
     }
 }
 
 // CARD TEXTS
-
 .text__card{
     font-family: $fontFamilyBase;
     font-weight: $fontRegular;
@@ -78,7 +71,6 @@
         letter-spacing: 1px;
     }
 }
-
 
 // FOOTER TEXTS
 .text__footer{

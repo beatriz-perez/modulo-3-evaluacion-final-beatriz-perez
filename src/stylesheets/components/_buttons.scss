@@ -7,10 +7,18 @@
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
-    border: 1px solid $colorTextMiddle;
-    color: $colorTextMiddle;
-    box-shadow: 0 0 3px $colorTextMiddle;
+    border: 1px solid $colorTheme5;
+    color: $colorTheme5;
+    box-shadow: 0 0 3px $colorTheme5;
     &:hover{
-        box-shadow: 0 0 5px $colorTextMiddle inset;
+        box-shadow: 0 0 5px $colorTheme5 inset;
+    }
+    &--off{
+        color: $colorTheme4;
+        border: 1px solid $colorTheme4;
+        box-shadow: 0 0 3px $colorTheme4;
+        &:hover{
+            box-shadow: 0 0 5px $colorTheme4 inset;
+        }    
     }
 }

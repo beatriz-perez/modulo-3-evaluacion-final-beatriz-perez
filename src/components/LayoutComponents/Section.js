@@ -9,7 +9,6 @@ export default class Section extends React.Component {
                 <div className="container__general">
                     <div className="container__section--section">
 
-                        <h2 className="section__title text__section--title" >{this.props.title}</h2>
                         {this.props.children}
                         
                     </div>
@@ -25,6 +24,5 @@ Section.defaultProps = {
 }
 Section.propTypes = {
     id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
     role: PropTypes.string.isRequired
 }
