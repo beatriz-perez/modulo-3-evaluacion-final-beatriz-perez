@@ -20,29 +20,33 @@ export default class Filters extends Component {
 
         return (
             <form className="firltersBox" onSubmit={this.preventSubmit}>
-                <TextInput 
-                    name="textFilter" 
-                    value={textFilter} 
-                    task={task} 
-                    labelText="filtrar por nombre"
-                    sampleText="Rick"
-                />
-
-                <RadioImput 
-                    name="order" 
-                    value="name"
-                    checkValue={order} 
-                    task={task} 
-                    labelText="ordenar por nombre"
-                />
-                <RadioImput 
-                    name="order" 
-                    value="id"
-                    checkValue={order} 
-                    task={task} 
-                    labelText="ordenar por id"
-                />
-
+                <fieldset className="firltersBox__set">
+                    <legend className="legend text__base">Filtrar por:</legend>
+                    <TextInput 
+                        name="textFilter" 
+                        value={textFilter} 
+                        task={task} 
+                        labelText="nombre"
+                        sampleText="Rick"
+                    />
+                </fieldset>
+                <fieldset className="firltersBox__set">
+                    <legend className="legend text__base">Ordenar por:</legend>
+                    <RadioImput 
+                        name="order" 
+                        value="name"
+                        checkValue={order} 
+                        task={task} 
+                        labelText="nombre"
+                    />
+                    <RadioImput 
+                        name="order" 
+                        value="id"
+                        checkValue={order} 
+                        task={task} 
+                        labelText="id"
+                    />
+                </fieldset>
             </form> 
         )
     }

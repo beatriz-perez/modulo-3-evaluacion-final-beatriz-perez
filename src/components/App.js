@@ -58,6 +58,7 @@ export default class App extends React.Component {
           <Switch>
 
             <Route exact path="/">
+              {/*<p className="text__base">project info</p> -------------------------> AÑADIR INFO */}
               <Filters info={this.state} task={this.changeFilters}/>
               <CardList info={this.state}/>
             </Route>

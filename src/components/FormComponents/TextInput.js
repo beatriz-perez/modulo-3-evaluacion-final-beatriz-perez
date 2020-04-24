@@ -15,15 +15,17 @@ export default class TextInput extends Component {
         const { name, value, labelText, sampleText } = this.props;
         return (
             <React.Fragment>
-                <label htmlFor={name} className="text__base">{labelText}</label>
-                <input
-                    type="text"  
-                    id={name} 
-                    name={name} 
-                    value={value} 
-                    placeholder={sampleText}
-                    onChange={this.handleChange}
-                />  
+                <label htmlFor={name} className="label text__base">
+                    {labelText}
+                    <input
+                        type="text"  
+                        id={name} 
+                        name={name} 
+                        value={value} 
+                        placeholder={sampleText}
+                        onChange={this.handleChange}
+                    />  
+                </label>
             </React.Fragment>
         )
     }

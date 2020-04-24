@@ -1,0 +1,51 @@
+//  FILTROS -------------------------------
+.firltersBox{
+    z-index: 10;
+    margin: 0 20px;
+    border-radius: 30px;
+    border: 2px solid $colorTheme3;
+    box-shadow: 0 0 15px 5px $colorTheme2;
+    background-color: rgba( 0, 0, 0, 0.7);
+    padding: 10px;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    &__set{
+        .legend{
+            
+            @include mediaSize(tablet){
+                float: left;
+                margin-right: 20px;
+            }        
+        }
+        .label{
+            margin-right: 15px;
+            input[type=text] {
+                width: 120px;
+                height: 20px;
+                border-radius: 5px;
+                border: none;
+                background-color: $colorTheme4;
+                box-shadow: none;
+                padding: 3px 10px;
+
+                font-size: 12px;
+                color: $colorTextLight;
+                &::placeholder{
+                    font-size: 12px;
+                    color: $colorTextLight;
+                }
+            }
+            input[type=radio] {
+                border: 1px solid red;
+            }     
+        }
+    }
+}
