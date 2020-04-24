@@ -20,33 +20,33 @@ export default class Filters extends Component {
 
         return (
             <form className="firltersBox" onSubmit={this.preventSubmit}>
-                <fieldset className="firltersBox__set">
-                    <legend className="legend text__base">Filtrar por:</legend>
-                    <TextInput 
+                <div className="firltersBox__set">
+                    <p className="legend text__base text__base--bold">filtrar por:</p>
+                    <TextInput
                         name="textFilter" 
                         value={textFilter} 
                         task={task} 
                         labelText="nombre"
                         sampleText="Rick"
                     />
-                </fieldset>
-                <fieldset className="firltersBox__set">
-                    <legend className="legend text__base">Ordenar por:</legend>
-                    <RadioImput 
+                </div>
+                <div className="firltersBox__set">
+                    <p className="legend text__base text__base--bold">ordenar por:</p>
+                    <RadioImput
                         name="order" 
                         value="name"
                         checkValue={order} 
                         task={task} 
                         labelText="nombre"
                     />
-                    <RadioImput 
+                    <RadioImput
                         name="order" 
                         value="id"
                         checkValue={order} 
                         task={task} 
                         labelText="id"
                     />
-                </fieldset>
+                </div>
             </form> 
         )
     }

@@ -14,19 +14,19 @@ export default class TextInput extends Component {
     render() {
         const { name, value, labelText, sampleText } = this.props;
         return (
-            <React.Fragment>
+            <div className="inputBox">
                 <label htmlFor={name} className="label text__base">
                     {labelText}
-                    <input
+                </label>
+                <input
                         type="text"  
                         id={name} 
                         name={name} 
                         value={value} 
                         placeholder={sampleText}
                         onChange={this.handleChange}
-                    />  
-                </label>
-            </React.Fragment>
+                />  
+            </div>
         )
     }
 }

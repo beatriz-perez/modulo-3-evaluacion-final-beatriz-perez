@@ -15,20 +15,20 @@ export default class RadioInput extends Component {
     render() {
         const { name, value, labelText, checkValue } = this.props;
         return (
-            <React.Fragment>
-                <label htmlFor={value} className="label text__base">
-                    <input
+            <div className="inputBox">
+                <input
                         type="radio"
                         name={name}
                         value={value}
                         id={value}
                         checked={checkValue === value ? true : false}
                         onChange={this.handleChange}
-                    />
+                />
+                <label htmlFor={value} className="label text__base">
+                    
                     {labelText}
                 </label>
-
-            </React.Fragment>
+            </div>
         )
     }
 }

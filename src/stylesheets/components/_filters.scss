@@ -1,51 +1,81 @@
 //  FILTROS -------------------------------
+
 .firltersBox{
+    position: -webkit-sticky;
+    position: sticky;
+    top: -7px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
     z-index: 10;
     margin: 0 20px;
     border-radius: 30px;
     border: 2px solid $colorTheme3;
     box-shadow: 0 0 15px 5px $colorTheme2;
     background-color: rgba( 0, 0, 0, 0.7);
-    padding: 10px;
-
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    padding: 4px;
+    @include mediaSize(tablet){
+        top: 0px;
+        padding: 12px;
+    }   
 
     &__set{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        @include mediaSize(tablet){
+            flex-direction: row;
+            align-items: center;
+        }   
         .legend{
-            
+            margin-bottom: 2px;
             @include mediaSize(tablet){
-                float: left;
-                margin-right: 20px;
-            }        
+                margin-bottom: 0;
+                margin-right: 15px;
+            } 
         }
-        .label{
-            margin-right: 15px;
+        .inputBox{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            .label{
+                margin-right: 10px;
+            }
+    
             input[type=text] {
-                width: 120px;
-                height: 20px;
+                width: 90px;
+                height: 18px;
+                padding: 2px 10px;
+                font-size: 12px;
+                color: $colorTextLight;
+    
+    
                 border-radius: 5px;
                 border: none;
                 background-color: $colorTheme4;
                 box-shadow: none;
-                padding: 3px 10px;
-
-                font-size: 12px;
-                color: $colorTextLight;
+    
                 &::placeholder{
                     font-size: 12px;
                     color: $colorTextLight;
                 }
+                @include mediaSize(tablet){
+                    width: 120px;
+                    height: 20px;
+                    padding: 3px 10px;
+                    font-size: 14px;    
+                }   
             }
             input[type=radio] {
-                border: 1px solid red;
-            }     
+                margin-top: 3px;
+            }
         }
     }
 }
