@@ -15,7 +15,7 @@
     border-radius: 30px;
     border: 2px solid $colorTheme3;
     box-shadow: 0 0 15px 5px $colorTheme2;
-    background-color: rgba( 0, 0, 0, 0.7);
+    background-color: rgba( 0, 0, 0, 0.8);
     padding: 4px;
     @include mediaSize(tablet){
         top: 0px;
@@ -35,7 +35,7 @@
             margin-bottom: 2px;
             @include mediaSize(tablet){
                 margin-bottom: 0;
-                margin-right: 15px;
+                margin-right: 8px;
             } 
         }
         .inputBox{
@@ -50,18 +50,15 @@
             }
     
             input[type=text] {
-                width: 90px;
+                width: 65px;
                 height: 18px;
                 padding: 2px 10px;
                 font-size: 12px;
                 color: $colorTextLight;
-    
-    
-                border-radius: 5px;
                 border: none;
+                border-radius: 5px;
                 background-color: $colorTheme4;
                 box-shadow: none;
-    
                 &::placeholder{
                     font-size: 12px;
                     color: $colorTextLight;

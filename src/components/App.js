@@ -24,7 +24,10 @@ export default class App extends React.Component {
       pageInfo: {},
       apiInfo: [],
       textFilter: "",
-      order: "id"
+      speciesFilter: "All",
+      statusFilter: false,
+      order: "id",
+      orederReverse: false
     }
   } 
   componentDidMount() {

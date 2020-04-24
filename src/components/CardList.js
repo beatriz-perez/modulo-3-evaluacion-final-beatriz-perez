@@ -8,7 +8,6 @@ import Card from './Card';
 export default class CardList extends Component {
     render() {
 
-        console.log(this.props);
         const generateJSX = (item, index) => {
             return (
                 <li key={index} className="listElement">
@@ -19,15 +18,18 @@ export default class CardList extends Component {
             )
         };
         
-        const { apiInfo, textFilter, order } = this.props.info;
-        const resultsArray = apiInfo
+        const { apiInfo, textFilter, speciesFilter, order, orederReverse, statusFilter } = this.props.info;
+        const filteredArray = apiInfo
             .filter(item => textFilter === "" || item.name.toLowerCase().includes(textFilter.toLowerCase()))
+            .filter(item => speciesFilter === "All" || item.species === speciesFilter)
+            .filter(item => statusFilter === false || item.status === "Alive")
             .sort((a, b) => {
                 if (a[order] > b[order]) { return 1; }
                 if (a[order] < b[order]) { return -1; }
                 else { return 0; }
             })
             .map(generateJSX);
+        const resultsArray = orederReverse === false ? filteredArray : filteredArray.reverse();
 
         let resultInfoText;
         switch (resultsArray.length) {

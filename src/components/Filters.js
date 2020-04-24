@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Componentes:
 import TextInput from './FormComponents/TextInput';
-import RadioImput from './FormComponents/RadioInput'
+import RadioImput from './FormComponents/RadioInput';
+import CheckboxInput from './FormComponents/CheckboxInput';
+import SelectInput from './FormComponents/SelectInput';
 
 export default class Filters extends Component {
     constructor(props) {
@@ -16,7 +18,7 @@ export default class Filters extends Component {
     }
 
     render() {
-        const { info:{ textFilter, order} , task } = this.props;
+        const { info:{ textFilter, speciesFilter, order, orederReverse, statusFilter} , task } = this.props;
 
         return (
             <form className="firltersBox" onSubmit={this.preventSubmit}>
@@ -28,6 +30,22 @@ export default class Filters extends Component {
                         task={task} 
                         labelText="nombre"
                         sampleText="Rick"
+                    />
+                    <SelectInput
+                        name="speciesFilter" 
+                        value={speciesFilter} 
+                        task={task} 
+                        labelText="especie"
+                    />
+                </div>
+                <div className="firltersBox__set">
+                    <p className="legend text__base text__base--bold">ver solo:</p>
+                    <CheckboxInput
+                        name="statusFilter"
+                        value="Alive"
+                        checked={statusFilter}
+                        task={task} 
+                        labelText="vivos" 
                     />
                 </div>
                 <div className="firltersBox__set">
@@ -46,7 +64,15 @@ export default class Filters extends Component {
                         task={task} 
                         labelText="id"
                     />
+                    <CheckboxInput
+                        name="orederReverse"
+                        value="reverse"
+                        checked={orederReverse}
+                        task={task} 
+                        labelText="invertir" 
+                    />
                 </div>
+
             </form> 
         )
     }
