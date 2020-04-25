@@ -20,9 +20,11 @@ Para trabajar con él en local puedes:
 
 1. clonar o descargar el repositorio en: [https://github.com/Adalab/modulo-3-evaluacion-final-beatriz-perez]
 
-2. iniciarlo desde la carpeta raiz ejecutando:  **`npm start`**
+2. instalar las dependencias con **`npm install`**
 
-3. abrir [http://localhost:3000](http://localhost:3000) en el navegador para visualizarlo
+3. iniciarlo desde la carpeta raiz ejecutando:  **`npm start`**
+
+4. abrir [http://localhost:3000](http://localhost:3000) en el navegador para visualizarlo
 
 ## Ver la versión online:
 
