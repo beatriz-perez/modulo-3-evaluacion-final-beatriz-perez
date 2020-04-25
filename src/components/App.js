@@ -43,7 +43,7 @@ export default class App extends React.Component {
         this.setState({
           apiInfo: data.results,
           pageInfo: data.info
-        });
+        })
       });
     } else {
       this.setState(savedState);

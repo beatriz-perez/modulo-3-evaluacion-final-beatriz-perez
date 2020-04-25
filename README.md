@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Módulo 3 - Evaluación Intermedia
 
-In the project directory, you can run:
+Ejercicio:
+página web con un listado de personajes de Rick and Morty, que podemos filtrar por el nombre del personaje empleando React para realizarlo.
+Desarrollado por Beatriz Pérez como trabajo final del módulo 3 de Adalab.
 
-### `npm start`
+## Cómo funciona:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+En la página principal encontrarás un listado de veinte personajes de la serie Rick y Morty.
+Mediante los filtros en el área superior podrás elegir ver sólo aquellas tarjetas cuyo nombre contenga el texto introducido, filtrarlas por especie y estado, o modificar el orden en que se muestran.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Al hacer click en una de las tarjetas, podrás ver la información en detalle del personaje correspondiente. 
+Y desde esta página de detalle podrás navegar al detalle de otros personajes según su orden de  ID.
 
-### `npm test`
+## Trabajar en local con los archivos de este proyecto:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este proyecto se ha creado con [Create React App](https://github.com/facebook/create-react-app).
+Para trabajar con él en local puedes:
 
-### `npm run build`
+1. clonar o descargar el repositorio en: [https://github.com/Adalab/modulo-3-evaluacion-final-beatriz-perez]
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. iniciarlo desde la carpeta raiz ejecutando:  **`npm start`**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+3. abrir [http://localhost:3000](http://localhost:3000) en el navegador para visualizarlo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Ver la versión online:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Este proyecto está publicado en GitHub Pages, en la url  [http://beta.adalab.es/modulo-3-evaluacion-intermedia-beatriz-perez]
