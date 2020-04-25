@@ -18,7 +18,7 @@ export default class CardList extends Component {
             )
         };
         
-        const { apiInfo, textFilter, speciesFilter, order, orederReverse, statusFilter } = this.props.info;
+        const { apiInfo, infoFilters:{ textFilter, speciesFilter, order, orderReverse, statusFilter } } = this.props.info;
         const filteredArray = apiInfo
             .filter(item => textFilter === "" || item.name.toLowerCase().includes(textFilter.toLowerCase()))
             .filter(item => speciesFilter === "All" || item.species === speciesFilter)
@@ -29,7 +29,7 @@ export default class CardList extends Component {
                 else { return 0; }
             })
             .map(generateJSX);
-        const resultsArray = orederReverse === false ? filteredArray : filteredArray.reverse();
+        const resultsArray = orderReverse === false ? filteredArray : filteredArray.reverse();
 
         let resultInfoText;
         switch (resultsArray.length) {

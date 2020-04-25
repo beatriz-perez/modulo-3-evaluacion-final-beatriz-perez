@@ -18,7 +18,7 @@ export default class Filters extends Component {
     }
 
     render() {
-        const { info:{ textFilter, speciesFilter, order, orederReverse, statusFilter} , task } = this.props;
+        const { info:{ textFilter, speciesFilter, order, orderReverse, statusFilter} , task } = this.props;
 
         return (
             <form className="firltersBox" onSubmit={this.preventSubmit}>
@@ -65,9 +65,9 @@ export default class Filters extends Component {
                         labelText="id"
                     />
                     <CheckboxInput
-                        name="orederReverse"
+                        name="orderReverse"
                         value="reverse"
-                        checked={orederReverse}
+                        checked={orderReverse}
                         task={task} 
                         labelText="invertir" 
                     />

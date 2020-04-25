@@ -16,8 +16,8 @@
     border: 2px solid $colorTheme3;
     box-shadow: 0 0 15px 5px $colorTheme2;
     background-color: rgba( 0, 0, 0, 0.8);
-    padding: 4px;
-    @include mediaSize(tablet){
+    padding: 7px;
+    @include mediaSize(desktop){
         top: 0px;
         padding: 12px;
     }   
@@ -27,18 +27,19 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        @include mediaSize(tablet){
+        @include mediaSize(desktop){
             flex-direction: row;
             align-items: center;
         }   
         .legend{
             margin-bottom: 2px;
-            @include mediaSize(tablet){
+            @include mediaSize(desktop){
                 margin-bottom: 0;
                 margin-right: 8px;
             } 
         }
         .inputBox{
+            margin-top: 3px;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -51,27 +52,36 @@
     
             input[type=text] {
                 width: 65px;
-                height: 18px;
-                padding: 2px 10px;
+                height: 16px;
+                padding: 2px 5px;
                 font-size: 12px;
-                color: $colorTextLight;
+                font-family: $fontFamilyBase;
+                color: $colorTextDark;
                 border: none;
                 border-radius: 5px;
-                background-color: $colorTheme4;
+                background-color: $colorTheme1;
                 box-shadow: none;
                 &::placeholder{
                     font-size: 12px;
-                    color: $colorTextLight;
+                    color: $colorTextDark;
                 }
-                @include mediaSize(tablet){
+                @include mediaSize(desktop){
                     width: 120px;
-                    height: 20px;
-                    padding: 3px 10px;
-                    font-size: 14px;    
+                    margin-right: 20px;    
                 }   
             }
-            input[type=radio] {
-                margin-top: 3px;
+            select{
+                background-color: $colorTheme1;
+                border: none;
+                width: 65px;
+                height: 16px;
+                font-size: 12px;
+                font-family: $fontFamilyBase;
+                color: $colorTextDark;
+                @include mediaSize(desktop){
+                    width: 120px;
+                    margin-right: 20px;
+                }   
             }
         }
     }

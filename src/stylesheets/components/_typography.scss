@@ -29,7 +29,7 @@
     @include mediaSize(tablet){
         font-size: 16px;
         line-height: 20px;
-        }
+    }
     @include mediaSize(desktop){
         font-size: 18px;
         line-height: 22px;
@@ -55,6 +55,26 @@
         font-weight: $fontBold;
     }
 }
+.text__info{
+    font-family: $fontFamilyBase;
+    color: $colorTextBase;
+    font-weight: $fontRegular;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: none;
+    @include mediaSize(tablet){
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @include mediaSize(desktop){
+        font-size: 16px;
+        line-height: 22px;
+    }
+    &--bold{
+        font-weight: $fontBold;
+    }
+}
+
 
 // CARD TEXTS
 .text__card{

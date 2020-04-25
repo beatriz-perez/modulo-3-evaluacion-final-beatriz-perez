@@ -18,7 +18,7 @@ export default class SelectInput extends Component {
                 <label htmlFor={name} className="label text__base">
                     {labelText}
                 </label>
-                <select id={name} onChange={this.handleChange}>
+                <select id={name} value={value} onChange={this.handleChange}>
                     <option value="All">todas</option>
                     <option value="Human">humana</option>
                     <option value="Alien">alien</option>

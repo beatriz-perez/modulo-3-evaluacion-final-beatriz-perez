@@ -11,6 +11,7 @@ import { fetchApiInfo } from '../services/APIservice';
 import Header from './LayoutComponents/Header';
 import Section from './LayoutComponents/Section';
 import Footer from './LayoutComponents/Footer';
+import InfoText from './InfoText';
 import Filters from './Filters';
 import CardList from './CardList';
 import Detail from './Detail';
@@ -18,16 +19,20 @@ import Detail from './Detail';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+    this.showIntroText = this.showIntroText.bind(this);
     this.changeFilters = this.changeFilters.bind(this);
     this.changeOrder = this.changeFilters.bind(this);
     this.state = {
+      introText: false,
       pageInfo: {},
       apiInfo: [],
-      textFilter: "",
-      speciesFilter: "All",
-      statusFilter: false,
-      order: "id",
-      orederReverse: false
+      infoFilters: {
+        textFilter: "",
+        speciesFilter: "All",
+        statusFilter: false,
+        order: "id",
+        orderReverse: false
+      }
     }
   } 
   componentDidMount() {
@@ -48,8 +53,16 @@ export default class App extends React.Component {
     localStorage.setItem('localinfo', JSON.stringify(this.state));
   };
 
+  showIntroText() {
+    this.setState(prevState => ({
+      introText: !prevState.introText
+    }));
+  }
+
   changeFilters(name, value) {
-    this.setState({ [name]: value })
+    const newInfoFilters = this.state.infoFilters;
+    newInfoFilters[name] = value;
+    this.setState({ infoFilters: newInfoFilters })
   };
 
   render() {
@@ -61,8 +74,8 @@ export default class App extends React.Component {
           <Switch>
 
             <Route exact path="/">
-              {/*<p className="text__base">project info</p> -------------------------> AÑADIR INFO */}
-              <Filters info={this.state} task={this.changeFilters}/>
+              <InfoText info={this.state.introText} task={this.showIntroText}/>
+              <Filters info={this.state.infoFilters} task={this.changeFilters}/>
               <CardList info={this.state}/>
             </Route>
 
