@@ -1,5 +1,5 @@
 
-# Módulo 3 - Evaluación Intermedia
+# Módulo 3 - Evaluación Final
 
 Ejercicio:
 página web con un listado de personajes de Rick and Morty, que podemos filtrar por el nombre del personaje empleando React para realizarlo.
