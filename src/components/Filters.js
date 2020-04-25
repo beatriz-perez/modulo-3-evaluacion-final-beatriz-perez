@@ -29,7 +29,7 @@ export default class Filters extends Component {
                         value={textFilter} 
                         task={task} 
                         labelText="nombre"
-                        sampleText="Rick"
+                        sampleText="rick"
                     />
                     <SelectInput
                         name="speciesFilter" 

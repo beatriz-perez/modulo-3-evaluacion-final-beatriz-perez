@@ -14,7 +14,9 @@ export default class InfoText extends Component {
     render() {
         return (
             <React.Fragment>
-            <p className="info__title text__title" onClick={this.handleClick}>+ info</p>
+            <p className="info__title text__title" onClick={this.handleClick}>
+                <i className={`fas fa-sort-down ${this.props.info === true ? "up" : "down"}`}></i> info
+            </p>
             <div className={this.props.info === true ? "info_box" : "hidden"}>
             
                 <p className="info_paragraph text__info">

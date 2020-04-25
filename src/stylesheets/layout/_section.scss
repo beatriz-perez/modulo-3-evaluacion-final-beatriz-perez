@@ -35,6 +35,12 @@
     @include mediaSize(tablet){
         margin-bottom: 20px;
     }
+    .up{
+        transform: rotate(180deg);
+    }
+    .down{
+        transform: rotate(0deg);
+    }
 }
 .info_box{
     width:100%;
