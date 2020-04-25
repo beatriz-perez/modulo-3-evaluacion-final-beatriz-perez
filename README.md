@@ -28,4 +28,4 @@ Para trabajar con él en local puedes:
 
 ## Ver la versión online:
 
-Este proyecto está publicado en GitHub Pages, en la url  [http://beta.adalab.es/modulo-3-evaluacion-intermedia-beatriz-perez]
+Este proyecto está publicado en GitHub Pages, en la url  [http://beta.adalab.es/modulo-3-evaluacion-final-beatriz-perez]
